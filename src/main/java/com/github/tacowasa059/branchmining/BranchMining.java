@@ -51,23 +51,17 @@ public final class BranchMining extends JavaPlugin {
     }
     public void set_time(double t){
         this.passed_time=t;
-        this.hour=(int)(this.get_time()/3600.0);
-        this.minute=(int)((this.get_time()-hour*3600)/60.0);
-        this.second=(int)((this.get_time()-hour*3600-60*minute));
+        calc_time();
     }
     public double get_time(){
         return this.passed_time;
     }
     public void show_time(){
-        this.hour=(int)(this.get_time()/3600.0);
-        this.minute=(int)((this.get_time()-hour*3600)/60.0);
-        this.second=(int)((this.get_time()-hour*3600-60*minute));
+        calc_time();
         Bukkit.broadcastMessage(ChatColor.RED+String.valueOf(this.hour)+"時間"+String.valueOf(minute)+"分"+String.valueOf(second)+"秒経過");
     }
     public void show_time(Player player){
-        this.hour=(int)(this.get_time()/3600.0);
-        this.minute=(int)((this.get_time()-hour*3600)/60.0);
-        this.second=(int)((this.get_time()-hour*3600-60*minute));
+        calc_time();
         player.sendMessage(ChatColor.GREEN+String.valueOf(hour)+"時間"+String.valueOf(minute)+"分"+String.valueOf(second)+"秒経過");
     }
     public void calc_time(){
