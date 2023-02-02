@@ -1,0 +1,32 @@
+name: BranchMining
+version: '${project.version}'
+main: com.github.tacowasa059.branchmining.BranchMining
+api-version: 1.16
+commands:
+  BM-reset:
+    description: reset the count of collections and time
+    usage: /<command>
+  BM-on:
+    description: enable plugin
+    usage: /<command>
+  BM-off:
+    description: disable plugin
+    usage: /<command>
+  BM-Count:
+    description: display count of ores
+    usage: /<command>
+  BM-Time:
+    description: display time
+    usage: /<command>
+  BM-getTools:
+    description: give items for branch mining
+    usage: /<command>
+  BM-setTimeLimit:
+    description: set Limit_Time [second]
+    usage: /<command> <time>
+  BM-ClearScoreBoard:
+    description: clear scoreboard
+    usage: /<command>
+  BM-SetLoc:
+    description: set location
+    usage: /<command>
